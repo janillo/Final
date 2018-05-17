@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Empleados</span>
+        <span fxFlex></span>
+        <div class="button-row ">
+            <a mat-mini-fab
+               [routerLink]="[ 'employee' ]">
+                <mat-icon>person_add</mat-icon>
+            </a>
+            <a mat-mini-fab
+               [routerLink]="[ 'employees' ]">
+                <mat-icon>view_list</mat-icon>
+            </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>

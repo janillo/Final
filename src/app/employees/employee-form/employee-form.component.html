@@ -1,0 +1,84 @@
+<div class="content-card">
+    <mat-card>
+        <mat-card-content>
+            <form [formGroup]="form"
+                  fxLayout="column"
+                  (ngSubmit)="onSubmit()">
+                <p>Please login to continue</p>
+                <div>
+                    <mat-form-field class="input-width">
+                        <input matInput
+                               placeholder="Name"
+                               formControlName="name">
+                        <mat-error *ngIf="isValidInput('name')">
+                            Please insert your Name
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="input-width">
+                        <input matInput
+                               placeholder="Company"
+                               formControlName="company">
+                        <mat-error *ngIf="isValidInput('company')">
+                            Please insert your Company
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="input-width">
+                        <input matInput
+                               type="number"
+                               placeholder="Age"
+                               formControlName="age">
+                        <mat-error *ngIf="isValidInput('age')">
+                            Please insert your Age
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="input-width">
+                        <input matInput
+                               [matDatepicker]="picker"
+                               placeholder="Choose a date"
+                               formControlName="birthdate">
+                        <mat-datepicker-toggle matSuffix
+                                               [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                        <mat-error *ngIf="isValidInput('birthdate')">
+                            Please insert your Birthdate
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-select placeholder="Your Project"
+                                    formControlName="project">
+                            <mat-option *ngFor="let project of projects"
+                                        [value]="project.id">
+                                {{ project.name }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        Color:
+                        <input matInput
+                               type="color"
+                               placeholder="Choose a color"
+                               formControlName="color">
+                        <mat-error *ngIf="isValidInput('color')">
+                            Please insert your prefered color
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <button mat-raised-button
+                            color="primary"
+                            type="submit">Guardar</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
