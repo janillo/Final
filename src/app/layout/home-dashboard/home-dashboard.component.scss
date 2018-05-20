@@ -18,11 +18,12 @@
 
 .dashboard-card-content {
     text-align: center;
+    min-height: 300px;
 }
 
 .card-size-group {
     min-width: 160px;
-    max-width: 200px;
+    max-width: 500px;
     box-shadow: 3px 0 6px rgba(0, 0, 0, .24);
 }
 
