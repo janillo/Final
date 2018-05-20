@@ -18,7 +18,6 @@ export class AuthenticationGuard implements CanActivate {
 		return this.authenticationService.isUserLoggedIn.pipe(
 			take(1),
 			map((isUserLoggedIn: boolean) => {
-				console.log(isUserLoggedIn);
 				if (!isUserLoggedIn) {
 					this.router.navigate([ '/login' ]);
 					return false;

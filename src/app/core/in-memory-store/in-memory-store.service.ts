@@ -9,7 +9,7 @@ export class InMemoryStoreService implements InMemoryDbService {
 				company: 'Uno',
 				age: 25,
 				birthday: '',
-				color: '',
+				color: '#00fdff',
 				project: 1
 			},
 			{
@@ -18,7 +18,7 @@ export class InMemoryStoreService implements InMemoryDbService {
 				company: 'Dos',
 				age: 28,
 				birthday: '',
-				color: '',
+				color: '#00fdff',
 				project: 1
 			},
 			{
@@ -27,7 +27,7 @@ export class InMemoryStoreService implements InMemoryDbService {
 				company: 'Tres',
 				age: 30,
 				birthday: '',
-				color: '',
+				color: '#00fdff',
 				project: 2
 			}
 		];

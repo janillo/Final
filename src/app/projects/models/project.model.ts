@@ -3,7 +3,7 @@ import { identifierModuleUrl } from '@angular/compiler';
 export class Project {
 	id?: string;
 	name: string;
-	teamSize: number;
+	teamSize?: number;
 	clientName: string;
 
 	constructor(id: string, name: string, teamSize: number, clientName: string) {

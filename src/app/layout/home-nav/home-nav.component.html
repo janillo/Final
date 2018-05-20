@@ -14,12 +14,12 @@
             </a>
             <a mat-list-item
                [routerLink]="[ '/employees']">
-                <mat-icon mat-list-icon>dashboard</mat-icon>
+                <mat-icon mat-list-icon>group</mat-icon>
                 <span mat-line>Empleados</span>
             </a>
             <a mat-list-item
                [routerLink]="[ '/projects']">
-                <mat-icon mat-list-icon>dashboard</mat-icon>
+                <mat-icon mat-list-icon>domain</mat-icon>
                 <span mat-line>Proyectos</span>
             </a>
         </mat-nav-list>
@@ -33,7 +33,7 @@
                     *ngIf="(isHandset | async)!.matches">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-            <span>Application Title</span>
+            <span>Hr Management</span>
         </mat-toolbar>
         <router-outlet></router-outlet>
     </mat-sidenav-content>

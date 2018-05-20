@@ -16,7 +16,7 @@ export class AuthenticationService {
 	constructor(private router: Router) {}
 
 	login(user: User) {
-		if (user.userName !== '' && user.userPassword !== '') {
+		if (user.userName === 'admin' && user.userPassword === 'ingresar') {
 			this.userLoggedIn.next(true);
 			this.router.navigate([ '/' ]);
 		}

@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>
+    Eliminar Registro?</h2>
+<mat-dialog-content>
+    <h3>{{data.name}}</h3>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button
+            type="button"
+            color="warn"
+            mat-dialog-close>Cancelar</button>
+    <button mat-button
+            color="primary"
+            (click)="submit()">Esta Bien!</button>
+</mat-dialog-actions>

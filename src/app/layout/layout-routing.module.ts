@@ -9,8 +9,14 @@ const routes: Routes = [
 		component: LayoutComponent,
 		children: [
 			{ path: '', component: HomeDashboardComponent },
-			{ path: 'projects', loadChildren: '../projects/projects.module#ProjectsModule' },
-			{ path: 'employees', loadChildren: '../employees/employees.module#EmployeesModule' }
+			{
+				path: 'projects',
+				loadChildren: '../projects/projects.module#ProjectsModule'
+			},
+			{
+				path: 'employees',
+				loadChildren: '../employees/employees.module#EmployeesModule'
+			}
 		]
 	}
 ];

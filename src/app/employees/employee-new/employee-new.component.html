@@ -2,9 +2,10 @@
     <mat-card>
         <mat-card-content>
             <form [formGroup]="form"
+                  #formEmployee="ngForm"
                   fxLayout="column"
-                  (ngSubmit)="onSubmit()">
-                <p>Please login to continue</p>
+                  (ngSubmit)="onSubmit(form,formEmployee)">
+                <p>Agrega un nuevo empleado</p>
                 <div>
                     <mat-form-field class="input-width">
                         <input matInput
@@ -41,11 +42,11 @@
                         <input matInput
                                [matDatepicker]="picker"
                                placeholder="Choose a date"
-                               formControlName="birthdate">
+                               formControlName="birthday">
                         <mat-datepicker-toggle matSuffix
                                                [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
-                        <mat-error *ngIf="isValidInput('birthdate')">
+                        <mat-error *ngIf="isValidInput('birthday')">
                             Please insert your Birthdate
                         </mat-error>
                     </mat-form-field>
@@ -73,7 +74,11 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
-                <div>
+                <div fxLayout="row"
+                     fxLayoutAlign="space-around center">
+                    <button mat-raised-button
+                            color="primary"
+                            (click)="resetForm(form,formEmployee)">Cancelar</button>
                     <button mat-raised-button
                             color="primary"
                             type="submit">Guardar</button>

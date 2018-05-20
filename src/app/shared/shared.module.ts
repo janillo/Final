@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatBadgeModule } from '@angular/material/badge';
 import {
 	MatAutocompleteModule,
 	MatButtonModule,
@@ -36,10 +37,13 @@ import {
 	MatTooltipModule
 } from '@angular/material';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ModalOptionComponent } from './modal-option/modal-option/modal-option.component';
 
 @NgModule({
+	imports: [ MatDialogModule, FormsModule, ReactiveFormsModule, MatInputModule, MatButtonModule ],
 	exports: [
 		MatAutocompleteModule,
+		MatBadgeModule,
 		MatButtonModule,
 		MatButtonToggleModule,
 		MatCardModule,
@@ -73,8 +77,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 		MatTooltipModule,
 		FormsModule,
 		ReactiveFormsModule,
-		NotFoundComponent
+		NotFoundComponent,
+		ModalOptionComponent
 	],
-	declarations: [ NotFoundComponent ]
+	declarations: [ NotFoundComponent, ModalOptionComponent ]
 })
 export class SharedModule {}

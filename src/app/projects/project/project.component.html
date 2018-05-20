@@ -1,3 +1,17 @@
-<p>
-  project works!
-</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Proyectos</span>
+        <span fxFlex></span>
+        <div class="button-row">
+            <a mat-mini-fab
+               [routerLink]="[ 'new' ]">
+                <mat-icon>person_add</mat-icon>
+            </a>
+            <a mat-mini-fab
+               [routerLink]="[ '/projects' ]">
+                <mat-icon>view_list</mat-icon>
+            </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>

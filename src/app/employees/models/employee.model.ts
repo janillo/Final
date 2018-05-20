@@ -8,6 +8,7 @@ export class Employee {
 	birthday: string;
 	color: string;
 	project: number;
+	projectFull?: {};
 
 	constructor(
 		id: string,
@@ -16,7 +17,8 @@ export class Employee {
 		age: number,
 		birthday: string,
 		color: string,
-		project: number
+		project: number,
+		projectFull: {}
 	) {
 		this.id = id;
 		this.name = name;
@@ -25,5 +27,6 @@ export class Employee {
 		this.birthday = birthday;
 		this.color = color;
 		this.project = project;
+		this.projectFull = projectFull;
 	}
 }

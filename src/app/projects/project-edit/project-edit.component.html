@@ -1,0 +1,61 @@
+<div class="content-card">
+    <mat-card>
+        <mat-card-content>
+            <form [formGroup]="form"
+                  #formProject="ngForm"
+                  fxLayout="column"
+                  (ngSubmit)="onSubmit(form,formProject)">
+                <p>Actualiza los datos del proyecto</p>
+                <div>
+                    <mat-form-field class="input-width">
+                        <input matInput
+                               placeholder="Id"
+                               formControlName="id"
+                               readonly>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="input-width">
+                        <input matInput
+                               placeholder="Name"
+                               formControlName="name">
+                        <mat-error *ngIf="isValidInput('name')">
+                            Please insert your Name
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="input-width">
+                        <input matInput
+                               type="number"
+                               placeholder="Team Size"
+                               formControlName="teamSize"
+                               readonly>
+                        <mat-error *ngIf="isValidInput('teamSize')">
+                            Please insert your Team Size
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="input-width">
+                        <input matInput
+                               placeholder="Client"
+                               formControlName="clientName">
+                        <mat-error *ngIf="isValidInput('clientName')">
+                            Please insert your Client
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxLayout="row"
+                     fxLayoutAlign="space-around center">
+                    <button mat-raised-button
+                            color="primary"
+                            (click)="resetForm(form,formEmployee)">Cancelar</button>
+                    <button mat-raised-button
+                            color="primary"
+                            type="submit">Guardar</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
